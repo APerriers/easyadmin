@@ -1,0 +1,836 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>系统配置 · EasyAdmin开发文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="zhongshaofa">
+        
+        
+    
+    <link rel="stylesheet" href="../../../layuimini.oss-cn-shenzhen.aliyuncs.com/public/uploads/gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../layuimini.oss-cn-shenzhen.aliyuncs.com/public/uploads/gitbook/gitbook-plugin-anchor-nav-x/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../layuimini.oss-cn-shenzhen.aliyuncs.com/public/uploads/gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../layuimini.oss-cn-shenzhen.aliyuncs.com/public/uploads/gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../layuimini.oss-cn-shenzhen.aliyuncs.com/public/uploads/gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../layuimini.oss-cn-shenzhen.aliyuncs.com/public/uploads/gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../layuimini.oss-cn-shenzhen.aliyuncs.com/public/uploads/gitbook/gitbook-plugin-styled-blockquotes/plugin-styled-blockquotes.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../layuimini.oss-cn-shenzhen.aliyuncs.com/public/uploads/gitbook/gitbook-plugin-expandable-chapters-interactive/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../layuimini.oss-cn-shenzhen.aliyuncs.com/public/uploads/gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../layuimini.oss-cn-shenzhen.aliyuncs.com/public/uploads/gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../layuimini.oss-cn-shenzhen.aliyuncs.com/public/uploads/gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../layuimini.oss-cn-shenzhen.aliyuncs.com/public/uploads/gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../layuimini.oss-cn-shenzhen.aliyuncs.com/public/uploads/gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="https://layuimini.oss-cn-shenzhen.aliyuncs.com/public/uploads/gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="auth.html" />
+    
+    
+
+    </head>
+    <body>
+
+
+<!-- Copyright � 2008. Spidersoft Ltd -->
+<style>
+A.applink:hover {border: 2px dotted #DCE6F4;padding:2px;background-color:#ffff00;color:green;text-decoration:none}
+A.applink       {border: 2px dotted #DCE6F4;padding:2px;color:#2F5BFF;background:transparent;text-decoration:none}
+A.info          {color:#2F5BFF;background:transparent;text-decoration:none}
+A.info:hover    {color:green;background:transparent;text-decoration:underline}
+</style>
+<div style='BORDER: 1px solid #DCE6F4; MARGIN-TOP: 20px; MARGIN-BOTTOM: 20px; MARGIN-LEFT: 5px; MARGIN-RIGHT: 5px; PADDING: 5px; BACKGROUND-COLOR: #eef8ff;line-height:180%; COLOR: #000000; font-family: Arial; font-size: 8pt; width=100%; FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr="#FFFFFFFF", EndColorStr="#F2F5FAFF");'>
+This page was saved using <a class="applink" href="http://www.spidersoft.com"><b>WebZIP 7.1.2.1052</b></a> <a class="applink" href="http://www.spidersoft.com"><b>offline browser</b></a>  on  12/26/20 16:04:23.<br>
+<b>Address:</b> <a class="info" href="http://easyadmin.99php.cn/docs/config/system.html">http://easyadmin.99php.cn/docs/config/system.html</a><br>
+<b>Title:</b> 系统配置 · EasyAdmin开发文档 &nbsp;&bull;&nbsp; <b>Size:</b> 26873 &nbsp;&bull;&nbsp; <b>Last Modified:</b> Wed, 09 Sep 2020 15:20:22 GMT<br></div>
+<!-- /Copyright � 2008. Spidersoft Ltd -->
+
+
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../docs.html">
+            
+                    
+                    项目简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../base/install.html">
+            
+                <a href="../base/install.html">
+            
+                    
+                    系统安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../base/architecture.html">
+            
+                <a href="../base/architecture.html">
+            
+                    
+                    系统架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../database/database.html">
+            
+                <a href="../database/database.html">
+            
+                    
+                    数据库规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    命令行CURD
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../curd/command.html">
+            
+                <a href="../curd/command.html">
+            
+                    
+                    CURD命令大全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../curd/table.html">
+            
+                <a href="../curd/table.html">
+            
+                    
+                    表结构规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    配置项
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.6.1" data-path="system.html">
+            
+                <a href="system.html">
+            
+                    
+                    系统配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="auth.html">
+            
+                <a href="auth.html">
+            
+                    
+                    权限忽略配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="static.html">
+            
+                <a href="static.html">
+            
+                    
+                    静态资源配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    控制器
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../backend/controller/annotations.html">
+            
+                <a href="../backend/controller/annotations.html">
+            
+                    
+                    注解权限
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../backend/controller/attributes.html">
+            
+                <a href="../backend/controller/attributes.html">
+            
+                    
+                    控制器属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../backend/controller/curd.html">
+            
+                <a href="../backend/controller/curd.html">
+            
+                    
+                    Curd引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../backend/controller/validate.html">
+            
+                <a href="../backend/controller/validate.html">
+            
+                    
+                    验证器使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    前端
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../frontend/base.html">
+            
+                <a href="../frontend/base.html">
+            
+                    
+                    必看基础信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../frontend/auth.html">
+            
+                <a href="../frontend/auth.html">
+            
+                    
+                    auth权限验证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../frontend/form.html">
+            
+                <a href="../frontend/form.html">
+            
+                    
+                    form表单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../frontend/table.html">
+            
+                <a href="../frontend/table.html">
+            
+                    
+                    table数据表格
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../frontend/listen.html">
+            
+                <a href="../frontend/listen.html">
+            
+                    
+                    内置监听事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../frontend/select.html">
+            
+                <a href="../frontend/select.html">
+            
+                    
+                    动态下拉选择
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../frontend/upload.html">
+            
+                <a href="../frontend/upload.html">
+            
+                    
+                    上传组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../frontend/date.html">
+            
+                <a href="../frontend/date.html">
+            
+                    
+                    时间控件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../frontend/editor.html">
+            
+                <a href="../frontend/editor.html">
+            
+                    
+                    富文本编辑器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    插件功能
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../addons/use.html">
+            
+                <a href="../addons/use.html">
+            
+                    
+                    插件使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../addons/dev.html">
+            
+                <a href="../addons/dev.html">
+            
+                    
+                    插件开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../base/question.html">
+            
+                <a href="../base/question.html">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com/" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../docs.html" >系统配置</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-minus-circle"></i><ul><li><span class="title-icon "></span><a href="#&#x7CFB;&#x7EDF;&#x914D;&#x7F6E;"><b></b>&#x7CFB;&#x7EDF;&#x914D;&#x7F6E;</a></li><li><span class="title-icon "></span><a href="#&#x8D85;&#x7BA1;&#x914D;&#x7F6E;"><b></b>&#x8D85;&#x7BA1;&#x914D;&#x7F6E;</a></li></ul></div><a href="#&#x7CFB;&#x7EDF;&#x914D;&#x7F6E;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x7CFB;&#x7EDF;&#x914D;&#x7F6E;"><a name="&#x7CFB;&#x7EDF;&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x7CFB;&#x7EDF;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7CFB;&#x7EDF;&#x914D;&#x7F6E;</h1>
+<h3 id="env&#x914D;&#x7F6E;&#x8BF4;&#x660E;"><a name="env&#x914D;&#x7F6E;&#x8BF4;&#x660E;" class="anchor-navigation-ex-anchor" href="#env&#x914D;&#x7F6E;&#x8BF4;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a>env&#x914D;&#x7F6E;&#x8BF4;&#x660E;</h3>
+<blockquote>
+<p>&#x540E;&#x53F0;&#x6A21;&#x5757;&#x914D;&#x7F6E;&#x8BF4;&#x660E;<code>EASYADMIN</code></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADMIN</td>
+<td>&#x540E;&#x53F0;&#x8DEF;&#x5F84;</td>
+<td>string</td>
+<td>admin</td>
+</tr>
+<tr>
+<td>CAPTCHA</td>
+<td>&#x540E;&#x53F0;&#x9A8C;&#x8BC1;&#x7801;&#x5F00;&#x5173;</td>
+<td>bool</td>
+<td>true</td>
+</tr>
+<tr>
+<td>IS_DEMO</td>
+<td>&#x662F;&#x5426;&#x4E3A;&#x6F14;&#x793A;&#x73AF;&#x5883;</td>
+<td>bool</td>
+<td>false</td>
+</tr>
+<tr>
+<td>STATIC_PATH</td>
+<td>&#x9759;&#x6001;&#x8D44;&#x6E90;&#x8DEF;&#x5F84;</td>
+<td>bool</td>
+<td>/static</td>
+</tr>
+<tr>
+<td>OSS_STATIC_PREFIX</td>
+<td>OSS&#x9759;&#x6001;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x524D;&#x7F00;</td>
+<td>bool</td>
+<td>static_easyadmin</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>&#x914D;&#x7F6E;&#x793A;&#x4F8B;</p>
+</blockquote>
+<pre><code class="lang-dotenv">   APP_DEBUG = true
+
+   [APP]
+   DEFAULT_TIMEZONE = Asia/Shanghai
+
+   [DATABASE]
+   TYPE = mysql
+   HOSTNAME = host.docker.internal
+   DATABASE = easyadmin
+   USERNAME = root
+   PASSWORD = root
+   HOSTPORT = 3306
+   CHARSET = utf8
+   DEBUG = true
+   PREFIX = ea_
+
+   [LANG]
+   default_lang = zh-cn
+
+   [EASYADMIN]
+   ADMIN = admintest
+   CAPTCHA = false
+   CDN =
+   EXAMPLE = true
+   OSS_STATIC_PREFIX = static_easyadmin
+</code></pre>
+<h1 id="&#x8D85;&#x7BA1;&#x914D;&#x7F6E;"><a name="&#x8D85;&#x7BA1;&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x8D85;&#x7BA1;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8D85;&#x7BA1;&#x914D;&#x7F6E;</h1>
+<blockquote>
+<p>&#x8D85;&#x7BA1;&#x4E0D;&#x53D7;&#x6743;&#x9650;&#x63A7;&#x5236;&#xFF0C;&#x9ED8;&#x8BA4;&#x83B7;&#x53D6;&#x6240;&#x6709;&#x6743;&#x9650;</p>
+</blockquote>
+<h3 id="&#x8D85;&#x7BA1;&#x8D26;&#x53F7;&#x914D;&#x7F6E;"><a name="&#x8D85;&#x7BA1;&#x8D26;&#x53F7;&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x8D85;&#x7BA1;&#x8D26;&#x53F7;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8D85;&#x7BA1;&#x8D26;&#x53F7;&#x914D;&#x7F6E;</h3>
+<p>&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4F4D;&#x7F6E;&#xFF1A;<code>app/common/constants/AdminConstant.php</code></p>
+<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+
+<span class="hljs-keyword">namespace</span> <span class="hljs-title">app</span>\<span class="hljs-title">common</span>\<span class="hljs-title">constants</span>;
+
+<span class="hljs-comment">/**
+ * &#x7BA1;&#x7406;&#x5458;&#x5E38;&#x91CF;
+ * Class AdminConstant
+ * <span class="hljs-doctag">@package</span> app\common\constants
+ */</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AdminConstant</span>
+</span>{
+
+    <span class="hljs-comment">/**
+     * &#x8D85;&#x7EA7;&#x7BA1;&#x7406;&#x5458;&#xFF0C;&#x4E0D;&#x53D7;&#x6743;&#x9650;&#x63A7;&#x5236;
+     */</span>
+    <span class="hljs-keyword">const</span> SUPER_ADMIN_ID = <span class="hljs-number">1</span>;
+
+}
+</code></pre>
+<ul>
+<li>&#x4FEE;&#x6539;&#x5E38;&#x91CF;&#xFF1A;SUPER_ADMIN_ID <code>&#x7BA1;&#x7406;&#x5458;&#x5BF9;&#x5E94;ID</code> </li>
+</ul>
+<footer class="page-footer"><span class="copyright">&#xA9; zhongshaofa all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2020-05-15 22:09:53
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="auth.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 权限忽略配置">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"系统配置","level":"1.6.1","depth":2,"next":{"title":"权限忽略配置","level":"1.6.2","depth":2,"path":"config/auth.md","ref":"config/auth.md","articles":[]},"previous":{"title":"配置项","level":"1.6","depth":1,"ref":"","articles":[{"title":"系统配置","level":"1.6.1","depth":2,"path":"config/system.md","ref":"config/system.md","articles":[]},{"title":"权限忽略配置","level":"1.6.2","depth":2,"path":"config/auth.md","ref":"config/auth.md","articles":[]},{"title":"静态资源配置","level":"1.6.3","depth":2,"path":"config/static.md","ref":"config/static.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["anchor-nav-x","tbfed-pagefooter","search-plus","popup","highlight","image-captions","styled-blockquotes","expandable-chapters-interactive","hide-element","code","insert-logo","custom-favicon","github"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy zhongshaofa","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/zhongshaofa/easyadmin"},"search":{},"styled-blockquotes":{},"popup":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"multipleH1":false,"showLevel":false,"float":{"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"toolTipMode":"click"},"favicon":"https://easyadmin.oss-cn-shenzhen.aliyuncs.com/docs/favicon.ico","expandable-chapters-interactive":{},"anchor-nav-x":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"custom-favicon":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 60px; min-height: 60px","url":"https://easyadmin.oss-cn-shenzhen.aliyuncs.com/docs/logo.png"},"search-plus":{},"image-captions":{"variable_name":"_pictures"}},"theme":"default","author":"zhongshaofa","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[{"backlink":"http://easyadmin.99php.cn/docs/config/backend/controller/annotations.html#fig1.7.1.1","level":"1.7.1","list_caption":"Figure: 执行命令行","alt":"执行命令行","nro":1,"url":"../../images/node.png","index":1,"caption_template":"Figure: _CAPTION_","label":"执行命令行","attributes":{},"skip":false,"key":"1.7.1.1"}]},"title":"EasyAdmin开发文档","language":"zh-hans","gitbook":"*","sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"description":"EasyAdmin详细开发文档教程"},"file":{"path":"config/system.md","mtime":"2020-05-15T14:09:53.930Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-09T15:19:10.612Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../layuimini.oss-cn-shenzhen.aliyuncs.com/public/uploads/gitbook/gitbook.js"></script>
+    <script src="../../../layuimini.oss-cn-shenzhen.aliyuncs.com/public/uploads/gitbook/theme.js"></script>
+    
+        
+        <script src="../../../layuimini.oss-cn-shenzhen.aliyuncs.com/public/uploads/gitbook/gitbook-plugin-anchor-nav-x/lib/handler.js"></script>
+        
+    
+        
+        <script src="../../../layuimini.oss-cn-shenzhen.aliyuncs.com/public/uploads/gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../layuimini.oss-cn-shenzhen.aliyuncs.com/public/uploads/gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../../layuimini.oss-cn-shenzhen.aliyuncs.com/public/uploads/gitbook/gitbook-plugin-expandable-chapters-interactive/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../layuimini.oss-cn-shenzhen.aliyuncs.com/public/uploads/gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../../layuimini.oss-cn-shenzhen.aliyuncs.com/public/uploads/gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../../layuimini.oss-cn-shenzhen.aliyuncs.com/public/uploads/gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="../../../layuimini.oss-cn-shenzhen.aliyuncs.com/public/uploads/gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../../layuimini.oss-cn-shenzhen.aliyuncs.com/public/uploads/gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../layuimini.oss-cn-shenzhen.aliyuncs.com/public/uploads/gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../layuimini.oss-cn-shenzhen.aliyuncs.com/public/uploads/gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../layuimini.oss-cn-shenzhen.aliyuncs.com/public/uploads/gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../layuimini.oss-cn-shenzhen.aliyuncs.com/public/uploads/gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../layuimini.oss-cn-shenzhen.aliyuncs.com/public/uploads/gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

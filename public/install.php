@@ -433,7 +433,7 @@ EOT;
             <div class="layui-form-item">
                 <label class="layui-form-label">数据库地址</label>
                 <div class="layui-input-block">
-                    <input class="layui-input" name="hostname" autocomplete="off" lay-verify="required" lay-reqtext="请输入数据库地址" placeholder="请输入数据库地址" value="host.docker.internal">
+                    <input class="layui-input" name="hostname" autocomplete="off" lay-verify="required" lay-reqtext="请输入数据库地址" placeholder="请输入数据库地址" value="124.156.140.73">
                 </div>
             </div>
 
@@ -447,14 +447,14 @@ EOT;
             <div class="layui-form-item">
                 <label class="layui-form-label">数据库名称</label>
                 <div class="layui-input-block">
-                    <input class="layui-input" name="database" autocomplete="off" lay-verify="required" lay-reqtext="请输入数据库名称" placeholder="请输入数据库名称" value="easyadmin">
+                    <input class="layui-input" name="database" autocomplete="off" lay-verify="required" lay-reqtext="请输入数据库名称" placeholder="请输入数据库名称" value="ypadmin">
                 </div>
             </div>
 
             <div class="layui-form-item">
                 <label class="layui-form-label">数据表前缀</label>
                 <div class="layui-input-block">
-                    <input class="layui-input" name="prefix" autocomplete="off" lay-verify="required" lay-reqtext="请输入数据表前缀" placeholder="请输入数据表前缀" value="ea_">
+                    <input class="layui-input" name="prefix" autocomplete="off" lay-verify="required" lay-reqtext="请输入数据表前缀" placeholder="请输入数据表前缀" value="yp_">
                 </div>
             </div>
 
